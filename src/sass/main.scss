@@ -1,0 +1,1120 @@
+@import "./colors";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62, 5%;
+	scroll-padding-top: 100px;
+	scroll-behavior: smooth;
+}
+.linkChanges {
+	font-weight: bold;
+}
+
+body {
+	font-family: "Source Sans 3", sans-serif;
+}
+
+//wrapper
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+//title
+.title {
+	padding: 0 1rem 0 0.8rem;
+	font-size: 1.75rem;
+	line-height: 2.1875rem;
+	text-transform: uppercase;
+	text-align: left;
+	font-weight: bold;
+}
+
+//Header
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+
+	&__container {
+		background-color: $primary-color;
+		.wrapper {
+			padding: 0.7rem 0.8rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			img {
+				width: 8rem;
+				z-index: 10;
+			}
+		}
+	}
+
+	.nav-mobile {
+		position: relative;
+		background-color: $white;
+		padding: 1rem 1.7rem;
+		z-index: -1;
+		height: 100vh;
+		transition: transform 0.3s;
+
+		&__menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			position: absolute;
+
+			a {
+				padding-bottom: 0.9rem;
+				font-size: 1.3rem;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: $black;
+				cursor: pointer;
+			}
+		}
+	}
+	.active {
+		transform: translateY(-100rem);
+	}
+}
+
+.nav-desktop {
+	display: none;
+}
+
+//MAIN
+.section2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 5rem;
+	background-color: $background;
+	width: 100%;
+	overflow: hidden;
+
+	&__ul {
+		text-align: left;
+		width: 100%;
+		padding: 0 0 1rem 1.8rem;
+
+		&__list {
+			text-transform: uppercase;
+			color: $primary-color;
+			font-size: 0.9375rem;
+			font-weight: 200;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 1.5rem 0 1.5rem 0;
+		button {
+			background-color: $primary-color;
+			color: $white;
+			border: none;
+			border-radius: 5px;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 1rem;
+			padding: 1.2rem 1.4rem;
+			transition: background-color 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #3a4acb;
+			}
+		}
+		span {
+			padding-left: 0.5rem;
+			color: $primary-color;
+			font-size: 1.1rem;
+			cursor: pointer;
+		}
+	}
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.8rem;
+		flex-wrap: wrap;
+
+		.containert-wrapper {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+		&__card {
+			cursor: pointer;
+			position: relative;
+			box-shadow: 0px 0px 50px -31px rgba(66, 68, 90, 1);
+
+			&:hover img {
+				filter: brightness(70%);
+			}
+
+			img {
+				width: 100%;
+				border-radius: 5px;
+				aspect-ratio: 1.6;
+				object-fit: cover;
+				transition: filter 0.3s;
+			}
+			&__text {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				text-align: left;
+				padding: 0.9rem;
+				text-transform: uppercase;
+				background-color: $white;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+		}
+	}
+}
+.section3 {
+	margin-top: 2rem;
+	.title {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1200px;
+	}
+	&__ul {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1200px;
+		text-align: left;
+		width: 100%;
+		padding: 0 0 1rem 1.8rem;
+
+		&__list {
+			margin: 0 auto;
+			width: 100%;
+			max-width: 1200px;
+			text-transform: uppercase;
+			color: $primary-color;
+			font-size: 0.9375rem;
+			font-weight: 200;
+		}
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 1rem 0 2rem 0;
+		background-image: url("/dist/img/section3-img/background-mobile.png");
+		background-size: cover;
+		background-position: center;
+		z-index: 10;
+		&__numberBox {
+			margin: 0 auto;
+			width: 100%;
+			max-width: 1200px;
+			&__numbers {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				text-transform: uppercase;
+				color: $white;
+				&__box {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					span {
+						font-size: 1.8rem;
+						font-weight: bold;
+					}
+					p {
+						font-size: 1rem;
+						padding-bottom: 1rem;
+					}
+				}
+			}
+		}
+
+		&__box {
+			&__card {
+				padding: 1rem;
+				margin: 1rem;
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+				background-color: $background;
+
+				&__title {
+					font-weight: 600;
+					font-size: 1.1rem;
+					text-transform: uppercase;
+				}
+				&__text {
+					font-size: 0.87rem;
+				}
+			}
+		}
+	}
+}
+.section4 {
+	margin: 2rem 0 4rem 0;
+	.title {
+		padding: 0 0.8rem 0 0.8rem;
+		font-size: 1.75rem;
+		line-height: 2.1875rem;
+		text-transform: uppercase;
+		text-align: left;
+		font-weight: bold;
+		width: 100%;
+	}
+	&__ul {
+		text-align: left;
+		width: 100%;
+		padding: 0 0 1rem 1.8rem;
+
+		&__list {
+			text-transform: uppercase;
+			color: $primary-color;
+			font-size: 0.9375rem;
+			font-weight: 200;
+		}
+	}
+
+	&__btnContainer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 1rem;
+
+		&__news {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			padding-top: 1rem;
+			button {
+				border: 2px solid $border-color;
+				text-transform: uppercase;
+				padding: 1rem 1.2rem;
+				border-radius: 5px;
+				background-color: transparent;
+				transition: border 0.3s;
+				cursor: pointer;
+
+				&:hover {
+					border: 2px solid $primary-color;
+				}
+			}
+			span {
+				color: $primary-color;
+				cursor: pointer;
+			}
+		}
+
+		&__lorem {
+			display: flex;
+			align-items: center;
+			gap: 0.7rem;
+			button {
+				background-color: $primary-color;
+				color: $white;
+				border: none;
+				border-radius: 5px;
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: 1rem;
+				padding: 1rem 1.2rem;
+				transition: background-color 0.3s;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #3a4acb;
+				}
+			}
+			span {
+				cursor: pointer;
+				color: $primary-color;
+			}
+		}
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		&__cardBox {
+			display: flex;
+			justify-content: center;
+			background-color: $white;
+			margin: 1rem 1rem 0 1rem;
+			border-radius: 5px;
+			box-shadow: 0px 0px 22px -7px rgba(66, 68, 90, 1);
+			.desktop {
+				display: none;
+			}
+
+			&__card {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				max-width: 328px;
+
+				.date {
+					color: $border-color;
+					width: 100%;
+					text-align: right;
+					padding: 0 1rem 0.5rem 0;
+				}
+
+				&__img {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					img {
+						width: 100%;
+						object-fit: cover;
+						border-top-left-radius: 5px;
+						border-top-right-radius: 5px;
+					}
+				}
+				&__text {
+					border-top: 4px solid $primary-color;
+					padding: 1rem 1rem 0.1rem 1rem;
+					letter-spacing: 2%;
+
+					&__title {
+						text-transform: uppercase;
+						font-weight: 400;
+						font-size: 1.125rem;
+						line-height: 1.6rem;
+						color: $primary-color;
+					}
+					&__longText {
+						font-size: 0.75rem;
+						padding: 1.25rem 0 1.25rem 0;
+						font-weight: 300;
+					}
+					&__button {
+						display: flex;
+						align-items: center;
+						gap: 1rem;
+						padding-top: 0.5rem;
+						button {
+							border: 2px solid $border-color;
+							text-transform: uppercase;
+							padding: 0.8rem 1.6rem;
+							border-radius: 5px;
+							background-color: transparent;
+							transition: border 0.3s;
+							cursor: pointer;
+							&:hover {
+								border: 2px solid $primary-color;
+							}
+						}
+						span {
+							color: $primary-color;
+							font-size: 1.3rem;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+		&__formContainer {
+			position: relative;
+			margin: 3rem 1rem 0 1rem;
+			&::before {
+				position: absolute;
+				content: "";
+				height: 1px;
+				background-color: $border-color;
+				width: 100%;
+				top: -1.5rem;
+			}
+
+			&__form {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				flex-direction: column;
+				border-radius: 5px;
+				padding: 0.9rem;
+				background-color: $white;
+				box-shadow: 0px 0px 22px -7px rgba(66, 68, 90, 1);
+
+				h2,
+				p {
+					text-align: center;
+					width: 100%;
+					margin-bottom: 1rem;
+					font-size: 0.9rem;
+				}
+
+				h2 {
+					font-size: 1.3rem;
+					text-transform: uppercase;
+					color: $primary-color;
+				}
+
+				.input {
+					width: 100%;
+					padding: 0.9rem 0.5rem;
+					margin-bottom: 1rem;
+					border: 1px solid $border-color;
+					border-radius: 5px;
+				}
+
+				.label {
+					font-size: 0.9rem;
+					font-weight: bold;
+					padding-bottom: 0.3rem;
+				}
+
+				&__checkbox {
+					display: flex;
+					gap: 0.7rem;
+
+					.checkboxInput {
+						cursor: pointer;
+						border: 1px solid black;
+					}
+					span {
+						color: $primary-color;
+					}
+					label {
+						font-size: 0.9rem;
+					}
+				}
+				&__btnContainer {
+					display: flex;
+					align-items: center;
+					gap: 0.7rem;
+					width: 100%;
+					margin: 1.3rem 1rem 0.5rem 0;
+					&__btn {
+						background-color: $primary-color;
+						color: $white;
+						border: none;
+						border-radius: 5px;
+						text-transform: uppercase;
+						font-size: 1rem;
+						padding: 0.8rem 1.2rem;
+						transition: background-color 0.3s;
+						cursor: pointer;
+						&:hover {
+							background-color: #3a4acb;
+						}
+					}
+					span {
+						cursor: pointer;
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+//footer
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	width: 100%;
+	background-color: $background;
+
+	&__logoBox {
+		margin-top: 3rem;
+		&__logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: scale(0.7);
+		}
+		&__companyBox {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 2.8rem;
+
+			&__icons {
+				display: flex;
+				gap: 1rem;
+			}
+
+			&__companyText {
+				position: relative;
+				&::before {
+					position: absolute;
+					content: "";
+					background-color: $border-color;
+					top: 0;
+					left: -1.2rem;
+					width: 0;
+					height: 90%;
+					border-left: 1px solid $border-color;
+				}
+				font-size: 0.9rem;
+				span {
+					font-weight: bold;
+				}
+			}
+		}
+
+		&__button {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+			margin: 0.9rem 0.5rem 1.3rem 0.5rem;
+			button {
+				padding: 1rem 1rem;
+				font-size: 0.9rem;
+				border-radius: 5px;
+				font-weight: 900;
+				background-color: $primary-color;
+				color: $white;
+				border: none;
+				text-transform: uppercase;
+				transition: 0.3s;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #3a4acb;
+				}
+			}
+			span {
+				cursor: pointer;
+				color: $primary-color;
+			}
+		}
+	}
+
+	&__textBox {
+		&__companyName {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-bottom: 2rem;
+
+			&__box1 {
+				&__title {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					p {
+						position: relative;
+						text-transform: uppercase;
+						color: $border-color;
+						font-size: 0.8rem;
+						&::after {
+							position: absolute;
+							content: "";
+							background-color: $border-color;
+							width: 130%;
+							height: 1px;
+							top: 0.5rem;
+							right: -8rem;
+							bottom: 0;
+						}
+						&::before {
+							position: absolute;
+							content: "";
+							background-color: $border-color;
+							width: 130%;
+							height: 1px;
+							top: 0.5rem;
+							right: 6.6rem;
+							bottom: 0;
+						}
+					}
+				}
+				&__title2 {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					p {
+						position: relative;
+						text-transform: uppercase;
+						color: $border-color;
+						font-size: 0.8rem;
+						&::after {
+							position: absolute;
+							content: "";
+							background-color: $border-color;
+							width: 40%;
+							height: 1px;
+							top: 0.5rem;
+							right: -5.2rem;
+							bottom: 0;
+						}
+						&::before {
+							position: absolute;
+							content: "";
+							background-color: $border-color;
+							width: 40%;
+							height: 1px;
+							top: 0.5rem;
+							right: 11.4rem;
+							bottom: 0;
+						}
+					}
+				}
+				&__text {
+					display: flex;
+					justify-content: center;
+					flex-direction: row;
+					font-size: 0.8rem;
+					text-transform: uppercase;
+					margin-top: 1rem;
+
+					&__left {
+						margin-right: 5rem;
+						p {
+							padding-bottom: 0.6rem;
+						}
+					}
+
+					&__right {
+						p {
+							padding-bottom: 0.6rem;
+							padding-right: 1rem;
+						}
+					}
+				}
+				&__text2 {
+					display: flex;
+					justify-content: center;
+					flex-direction: row;
+					font-size: 0.8rem;
+					text-transform: uppercase;
+					margin-top: 1rem;
+
+					&__left2 {
+						margin-right: 5rem;
+						p {
+							padding-bottom: 0.6rem;
+						}
+					}
+
+					&__right2 {
+						p {
+							padding-bottom: 0.6rem;
+							padding-right: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//MEDIA
+@media (min-width: 1000px) {
+	//HEADER
+	.header {
+		.wrapper {
+			padding: 0.7rem 1rem;
+		}
+		button {
+			display: none;
+		}
+		.nav-desktop {
+			display: block;
+			a {
+				text-decoration: none;
+				text-transform: uppercase;
+				color: $white;
+				padding-right: 1.3rem;
+
+				transition: font-weight 0.3s;
+
+				&:hover {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	.nav-mobile {
+		display: none;
+	}
+	//MAIN
+	.section2 {
+		&__container {
+			width: 100%;
+			&__card {
+				width: 16.75rem;
+
+				img {
+					width: 100%;
+					border-radius: 5px;
+					aspect-ratio: 1;
+					object-fit: cover;
+				}
+				&__text {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					text-align: left;
+					padding: 0.9rem;
+					text-transform: uppercase;
+					background-color: $white;
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.section3 {
+		&__ul {
+			margin: 0 auto;
+			width: 100%;
+			max-width: 1200px;
+			text-align: left;
+			width: 100%;
+			padding: 0 0 1rem 1.8rem;
+
+			&__list {
+				text-transform: uppercase;
+				color: $primary-color;
+				font-size: 0.9375rem;
+				font-weight: 200;
+			}
+		}
+		&__container {
+			background-image: url("/dist/img/section3-img/bcakground-desktop.png");
+			&__numberBox {
+				padding-top: 2rem;
+				&__numbers {
+					margin: 0 auto;
+					width: 100%;
+					max-width: 1200px;
+					display: flex;
+					justify-content: space-evenly;
+					align-items: center;
+					flex-direction: row;
+					&__box {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: column;
+						span {
+							font-size: 2rem;
+							font-weight: bold;
+						}
+						p {
+							font-size: 1rem;
+							padding-bottom: 1rem;
+						}
+					}
+				}
+			}
+
+			&__box {
+				margin: 0 auto;
+				width: 100%;
+				max-width: 1200px;
+				display: flex;
+				padding-bottom: 2rem;
+				&__card {
+					padding: 1.2rem;
+					margin: 1rem;
+					display: flex;
+					flex-direction: column;
+					gap: 2rem;
+					background-color: $background;
+
+					&__title {
+						font-size: 1.2rem;
+						text-transform: uppercase;
+					}
+					&__text {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+	.section4 {
+		margin-bottom: 5rem;
+		.title {
+			padding: 0 0.8rem 0 0.8rem;
+			font-size: 1.75rem;
+			line-height: 2.1875rem;
+			text-transform: uppercase;
+			text-align: left;
+			font-weight: bold;
+			width: 100%;
+		}
+		&__ul {
+			text-align: left;
+			width: 100%;
+			padding: 0 0 1rem 1.8rem;
+
+			&__list {
+				text-transform: uppercase;
+				color: $primary-color;
+				font-size: 0.9375rem;
+				font-weight: 200;
+			}
+		}
+		&__btnContainer {
+			padding-top: 1rem;
+			align-items: flex-end;
+			flex-direction: row;
+		}
+		&__container {
+			display: flex;
+			align-items: flex-end;
+			flex-direction: row;
+			gap: 3rem;
+
+			.cardBox-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+			&__cardBox {
+				.desktop {
+					display: block;
+					align-items: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					object-fit: cover;
+					border-right: 4px solid $primary-color;
+				}
+
+				&__card {
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					flex-direction: column;
+					max-width: 100%;
+
+					.date {
+						padding-right: 1rem;
+					}
+
+					&__img {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						img {
+							display: none;
+						}
+					}
+
+					&__text {
+						display: flex;
+						justify-content: space-between;
+						align-items: flex-start;
+						flex-direction: column;
+						border-top: none;
+						&__title {
+							font-weight: 400;
+							font-size: 1.5rem;
+						}
+						&__longText {
+							font-size: 1rem;
+						}
+					}
+				}
+			}
+			&__formContainer {
+				&::before {
+					position: absolute;
+					content: "";
+					background-color: $border-color;
+					left: -40px;
+					top: 0;
+					width: 0;
+					height: 100%;
+					border-left: 1px solid $border-color;
+				}
+
+				&__form {
+					width: 400px;
+
+					h2,
+					p {
+						text-align: center;
+						margin-bottom: 2.4rem;
+						font-size: 0.9rem;
+					}
+
+					h2 {
+						font-size: 1.5rem;
+						padding-top: 1rem;
+					}
+
+					.input {
+						margin-bottom: 2rem;
+					}
+
+					&__btnContainer {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						gap: 0.7rem;
+						margin: 4rem 1rem 1.7rem 0;
+						&__btn {
+							font-size: 1.1rem;
+							padding: 1rem 1.4rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		.wrapper {
+			display: flex;
+			gap: 10rem;
+			align-items: center;
+		}
+
+		&__logoBox {
+			margin-top: 0rem;
+
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			&__logo {
+				transform: scale(0.8);
+			}
+		}
+
+		&__textBox {
+			margin-top: 3rem;
+
+			&__companyName {
+				&__box1 {
+					&__title {
+						p {
+							&::after {
+								position: absolute;
+								content: "";
+								background-color: $border-color;
+								width: 10rem;
+								height: 1px;
+								top: 0.5rem;
+								right: -11.5rem;
+								bottom: 0;
+							}
+							&::before {
+								position: absolute;
+								content: "";
+								background-color: $border-color;
+								width: 10rem;
+								height: 1px;
+								top: 0.5rem;
+								right: 6.6rem;
+								bottom: 0;
+							}
+						}
+					}
+					&__title2 {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						p {
+							position: relative;
+							text-transform: uppercase;
+							color: $border-color;
+							font-size: 0.8rem;
+							&::after {
+								position: absolute;
+								content: "";
+								background-color: $border-color;
+								width: 8rem;
+								height: 1px;
+								top: 0.5rem;
+								right: -8.9rem;
+								bottom: 0;
+							}
+							&::before {
+								position: absolute;
+								content: "";
+								background-color: $border-color;
+								width: 8rem;
+								height: 1px;
+								top: 0.5rem;
+								right: 11.4rem;
+								bottom: 0;
+							}
+						}
+					}
+					&__text {
+						display: flex;
+						justify-content: center;
+						flex-direction: row;
+						font-size: 0.8rem;
+						text-transform: uppercase;
+						margin-top: 1rem;
+
+						&__left {
+							margin-right: 5rem;
+							p {
+								padding-bottom: 0.6rem;
+							}
+						}
+
+						&__right {
+							p {
+								padding-bottom: 0.6rem;
+								padding-right: 1rem;
+							}
+						}
+					}
+					&__text2 {
+						display: flex;
+						justify-content: center;
+						flex-direction: row;
+						font-size: 0.8rem;
+						text-transform: uppercase;
+						margin-top: 1rem;
+
+						&__left2 {
+							margin-right: 5rem;
+							p {
+								padding-bottom: 0.6rem;
+							}
+						}
+
+						&__right2 {
+							p {
+								padding-bottom: 0.6rem;
+								padding-right: 1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
